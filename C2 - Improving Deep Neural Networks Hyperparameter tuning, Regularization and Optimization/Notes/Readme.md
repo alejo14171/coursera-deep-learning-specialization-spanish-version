@@ -239,19 +239,20 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
   - It reduces the generalization error.
   - You can use some snapshots of your NN at the training ensembles them and take the results.
 
-### Normalizing inputs
+### Sección 4 de la semana 1: Setting up your optimization problem -> Empezando a abordar su problema de optimización
+#### Clase: Normalizing inputs -> Normalizando las entradas de la red
 
-- If you normalize your inputs this will speed up the training process a lot.
-- Normalization are going on these steps:
-  1. Get the mean of the training set: `mean = (1/m) * sum(x(i))`
-  2. Subtract the mean from each input: `X = X - mean`
-     - This makes your inputs centered around 0.
-  3. Get the variance of the training set: `variance = (1/m) * sum(x(i)^2)`
-  4. Normalize the variance. `X /= variance`
-- These steps should be applied to training, dev, and testing sets (but using mean and variance of the train set).
-- Why normalize?
-  - If we don't normalize the inputs our cost function will be deep and its shape will be inconsistent (elongated) then optimizing it will take a long time.
-  - But if we normalize it the opposite will occur. The shape of the cost function will be consistent (look more symmetric like circle in 2D example) and we can use a larger learning rate alpha - the optimization will be faster.
+- Si usted normaliza las entradas de su red, el proceso de entrenamiento será mucho más rápido, comparado a si no lo hace.
+- Para normalizar las entradas de su red, puede seguir los siguientes pasos:
+  1. Obtenga la media de las entradas del conjunto de entrenamiento (recuerde que las entradas se denotan con `x` y las etiquetas con `y`: `mean = (1/m) * sum(x(i))`
+  2. Restele a cada entrada `x` la media `mean`: `X = X - mean`
+     - Esto permitirá que sus entradas estén centradas alrededor de cero.
+  3. Obtenga la varianza del conjunto de entrenamiento: `variance = (1/m) * sum(x(i)^2)`
+  4. Normalice su conjunto de entrenamiento usando la varianza. `X /= variance`
+- Estos pasos deben ser aplicados a los conjuntos de entrenamiento, desarrollo (dev) y testeo, teniendo en cuenta usar la media y la varianza del conjunto de entrenamiento.
+- Por qué normalizar?
+  - Si usted no normaliza las entradas de su red, la función de costo va a tomar valores muy grandes o muy pequeños, haciendo que su mínimo global se encuentre muy 'profundo'. Esto resulta en una función de costo, que al graficarla, se podría ver elongada, algo así como delgada y profunda, esto hace que el proceso de entrenamiento de la red, en efecto, el algoritmo de Descenso del gradiente, se tarde mucho más en alcanzar dicho mínimo. Esto nos obliga entonces a usar una taza de aprendizaje muy pequeña, lo que forza al algoritmo de descenso del gradiente a ser mucho más lento debido al avance lento asobre la función de costo. 
+  - Por tanto, si normalizamos, estamos haciendo que la función de costo tome una forma mucho más simétrica, y por tanto, podemos usar una taza de aprendizaje alpha mucho mayor, sin riesgo de caer en gradientes que explotan, o iteraciones que se quedan rebotando alrededor del mínimo. La optimización por tanto será más rápida. 
 
 ### Vanishing / Exploding gradients
 
