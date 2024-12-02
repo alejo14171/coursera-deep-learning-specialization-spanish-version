@@ -1,8 +1,8 @@
-# Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
+# Curso 2 de la especialización titulado: Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
 
-This is the second course of the deep learning specialization at [Coursera](https://www.coursera.org/specializations/deep-learning) which is moderated by [DeepLearning.ai](http://deeplearning.ai/). The course is taught by Andrew Ng.
+Este es el segundo curso de la especialización en Deep Learning, que se puede encontrar en [Coursera](https://www.coursera.org/specializations/deep-learning), creado y moderado por [DeepLearning.ai](http://deeplearning.ai/). El curso es enseñado por Andrew Ng, gran mentor e inspirador en el mundo de la enseñanza de IA.
 
-## Table of contents
+## Tabla de contenido
 
 * [Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization](#improving-deep-neural-networks-hyperparameter-tuning-regularization-and-optimization)
    * [Table of contents](#table-of-contents)
